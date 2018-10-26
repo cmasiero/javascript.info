@@ -129,5 +129,4 @@ function object_methods_this2(){
 	user1.sayHi(); // Ilya
 	
 	
-	
 }
