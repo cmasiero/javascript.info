@@ -116,7 +116,7 @@ function object_methods_this2(){
 	
 	console.log("*** Arrow functions have no \"this\" ***");
 	
-	console.log("Arrow functions are special: they don’t have their 'own' this. ");
+	console.log("Arrow functions are special: they don't have their 'own' this. ");
 	console.log("If we reference this from such a function, it's taken from the outer 'normal' function.");
 	let user1 = {
 			firstName: "Ilya",
