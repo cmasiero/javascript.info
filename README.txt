@@ -2,3 +2,4 @@
 16 10 2018 :  https://javascript.info/object#computed-properties (Property value shorthand)
 23 10 2018 :  https://javascript.info/symbol (Symbols are skipped by for...in)
 24 10 2018 :  https://javascript.info/object-toprimitive (Object to primitive conversion)
+30 10 2018 :  https://javascript.info/array-methods
