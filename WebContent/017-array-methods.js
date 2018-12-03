@@ -2,7 +2,6 @@
  * 
  */
 function array_methods() {
-	
 	console.log("*** array_methods() ***");
 	
 	console.log("*** splice");
@@ -140,10 +139,85 @@ function array_methods() {
 	console.log("But for us an array of names would be much more comfortable than a single string.");
 	console.log("The str.split(delim) method does exactly that");
 	let names = 'Bilbo, Gandalf, Nazgul';
-	let arr = names.split(', ');
-	for (let name of arr) {
-	  alert( `A message to ${name}.` ); // A message to Bilbo  (and other names)
+	let arr11 = names.split(', ');
+	for (let name of arr11) {
+	  console.log( `A message to ${name}.` ); // A message to Bilbo  (and other names)
 	}
+	
+	console.log("* join");
+	console.log("The call arr.join(str) does the reverse to split.");
+	let arr12 = ['Bilbo', 'Gandalf', 'Nazgul'];
+	let str12 = arr12.join(';');
+	console.log( str12 ); // Bilbo;Gandalf;Nazgul
+	
+	
+	console.log("*** reduce/reduceRight");
+	console.log("The methods arr.reduce and arr.reduceRight are used to calculate a single value based on the array.");
+	console.log("let value = arr.reduce(function(previousValue, item, index, arr) {");
+	console.log("    // ...");
+	console.log("}, initial);");
+	console.log("- item:          is the current array item.");
+	console.log("- index:         is its position.");
+	console.log("- arr:           is the array.");
+	console.log("- previousValue: is the result of the previous function call");
+	console.log("- initial:       for the first call.");
+	
+	let arr13 = [1, 2, 3, 4, 5];
+	let result13 = arr13.reduce((sum, current) => sum + current, 0);
+	console.log(result13); // 15
+               
+	console.log("Without initial value, it is the same:");
+	let result14 = arr13.reduce((sum, current) => sum + current);
+	console.log(result14); // 15
+	
+	console.log("But such use requires an extreme care. If the array is empty, then reduce call without initial value gives an error.");
+	
+	
+	console.log("*** Iterate: forEach");
+	console.log("The syntax:");
+	console.log("arr.forEach(function(item, index, array) {");
+	console.log("    // ... do something with item");
+	console.log("});");
+
+	// for each element call alert
+	["Bilbo", "Gandalf", "Nazgul"].forEach(console.log);
+	
+	console.log("And this code is more elaborate about their positions in the target array:");
+	
+	["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
+		  console.log(`${item} is at index ${index} in ${array}`);
+	});
+	
+	console.log("*** Array.isArray");
+	console.log("So typeof does not help to distinguish a plain object from an array:");
+	console.log("alert(Array.isArray([])); // true");
+	
+	
+	console.log("*** Most methods support 'thisArg'");
+	console.log("arr.find(func, thisArg);");
+	console.log("arr.filter(func, thisArg);");
+	console.log("arr.map(func, thisArg);");
+	
+	let user15 = {
+			age: 18,
+			younger(otherUser) {
+			return otherUser.age < this.age;
+			}
+	};
+
+	let users15 = [
+		{age: 12},
+		{age: 16},
+		{age: 32}
+		];
+
+	// find all users younger than user
+	let youngerUsers = users15.filter(user15.younger, user15);
+
+	console.log(youngerUsers.length); // 2
+	console.log("In the call above, we use user.younger as a filter and also provide user as the context for it. If we didn’t"); 
+	console.log("provide the context, users.filter(user.younger) would call user.younger as a standalone function, with"); 
+	console.log("this=undefined. That would mean an instant error.");
 	
 	
 }
