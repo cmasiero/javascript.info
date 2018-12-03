@@ -89,6 +89,22 @@ function iterables(){
     }
 			
     console.log("* Iterables and array-likes");
+    console.log("  - Iterables are objects that implement the Symbol.iterator method, as described above.");
+    console.log("  - Array-likes are objects that have indexes and length, so they look like arrays.");
+    console.log("Iterable may be not array-like. And vice versa an array-like may be not iterable.");
+    console.log("And here's the object that is array-like, but not iterable:");
+    
+    let arrayLike = { // has indexes and length => array-like
+        0: "Hello",
+    	1: "World",
+    	length: 2
+    };
+
+    // Error (no Symbol.iterator)
+    // for (let item of arrayLike) {} (TypeError: arrayLike is not iterable[Ulteriori informazioni])
+    
+    
+    console.log("* Array.from");
     
     
 }
