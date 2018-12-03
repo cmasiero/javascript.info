@@ -129,11 +129,21 @@ function array_methods() {
 	console.log("* Arrow functions for the best");
 	console.log("arr.sort( (a, b) => a - b );");
 	
-	console.log("*** reverse");
+	console.log("* reverse");
 	let arr10 = [1, 2, 3, 4, 5];
 	arr10.reverse();
 	console.log( "reverse " +  arr10 ); // 5,4,3,2,1
 	
+	
+	console.log("* split and join");
+	console.log("We are writing a messaging app, and the person enters the comma-delimited list of receivers: John, Pete, Mary.");
+	console.log("But for us an array of names would be much more comfortable than a single string.");
+	console.log("The str.split(delim) method does exactly that");
+	let names = 'Bilbo, Gandalf, Nazgul';
+	let arr = names.split(', ');
+	for (let name of arr) {
+	  alert( `A message to ${name}.` ); // A message to Bilbo  (and other names)
+	}
 	
 	
 }
