@@ -78,7 +78,7 @@ function iterables(){
     let str = "Hello";
 
     // does the same as
-    // for (let char of str) alert(char);
+    // for (let char of str) console.log(char);
 
     let iterator = str[Symbol.iterator]();
 
@@ -103,8 +103,27 @@ function iterables(){
     // Error (no Symbol.iterator)
     // for (let item of arrayLike) {} (TypeError: arrayLike is not iterable[Ulteriori informazioni])
     
-    
     console.log("* Array.from");
+    console.log("There's a universal method Array.from that brings them together."); 
+    console.log("It takes an iterable or array-like value and makes a 'real' Array from it."); 
+    console.log("Then we can call array methods on it.");
+    
+    let arrayLike2 = {
+        0: "Hello",
+    	1: "World",
+    	length: 2
+    };
+
+    let arr2 = Array.from(arrayLike2); // (*)
+    console.log(arr2.pop()); // World (method works)
+    
+    
+    console.log("The full syntax for Array.from allows to provide an optional 'mapping' function:");
+    console.log("Array.from(obj[, mapFn, thisArg])");
+    
+    // square each number
+    let arr = Array.from(range, num => num * num);
+    console.log(arr); // 1,4,9,16,25
     
     
 }
