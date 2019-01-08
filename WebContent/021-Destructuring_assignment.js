@@ -235,8 +235,8 @@ function destructuring_assignmentB(){
 
 	// ...and it immediately expands it to variables
 	function showMenuOK({title = "Untitled", width = 200, height = 100, items = []}) {
-	  // title, items – taken from options,
-	  // width, height – defaults used
+	  // title, items - taken from options,
+	  // width, height - defaults used
 	  console.log( `${title} ${width} ${height}` ); // My Menu 200 100
 	  console.log( items ); // Item1, Item2
 	}
