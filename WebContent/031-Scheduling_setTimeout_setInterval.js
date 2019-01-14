@@ -43,7 +43,7 @@ function schedulingSetTimeoutSetInterval(){
 	setTimeout(() => { clearInterval(timerId2); console.log('stop'); }, 5000);
 	
 	
-	console.log("*** Recursive setTimeout");
+	console.log("*** Recursive setTimeout"); 
 	
 	
 	
