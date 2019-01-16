@@ -27,14 +27,18 @@
 <script type="text/javascript" src="029-Function-object-NFE.js"></script>
 <script type="text/javascript" src="030-The_new_Function_syntax.js"></script>
 <script type="text/javascript" src="031-Scheduling_setTimeout_setInterval.js"></script>
+<script type="text/javascript" src="032-Decorators_forwarding_call_apply.js"></script>
+<script type="text/javascript" src="033-Function_binding.js"></script>
+<script type="text/javascript" src="034-Currying-and-partials.js"></script>
+<script type="text/javascript" src="035-Arrow_functions_revisited.js"></script>
 
 <title>javascript-info</title>
 </head>
 <body>
-<h3>From site https://javascript.info/</h3>
 
-<table>
-
+<table border="1" style="float: left;">
+<!-- <h3>From site https://javascript.info/</h3> -->
+<tr><td colspan="2">From site https://javascript.info/</td></tr>
 <tr>
 <td style="width: 100px;"><input type="button" value="001-code-structure" onclick="code_structure();"/></td>
 <td style="width: 100px;"><input type="button" value="002-data-types" onclick="data_types();"/></td>
@@ -81,8 +85,10 @@
 </tr>
 </table>
 
-<h3>Advanced working with functions</h3>
-<table>
+
+<table border="1" style="display: inline-block;">
+<tr><td colspan="2">Advanced working with functions</td></tr>
+<!-- <h3>Advanced working with functions</h3> -->
 <tr>
 <td><input type="button" value="025_Rest_parameters_and_spread_operator" onclick="rest_parameters_spread_operator()"/></td>
 <td><input type="button" value="026_Closure" onclick="closure()"/></td>
@@ -95,7 +101,47 @@
 
 <tr>
 <td><input type="button" value="030-The_new_Function_syntax" onclick="theNewFunctionSyntax()"/></td>
+<td></td>
+</tr>
+
+<tr>
 <td><input type="button" value="031-Scheduling_setTimeout_setInterval" onclick="schedulingSetTimeoutSetInterval()"/></td>
+<td><input type="button" value="031-Scheduling_recursive_setTimeout" onclick="schedulingRecursiveSetTimeout()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="031-Scheduling_setTimeout0" onclick="schedulingSetTimeout0()"/></td>
+<td><input type="button" value="031-Scheduling_splitting_CPU_hungry_tasks" onclick="schedulingSplittingCPUHungryTasks()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="031-Scheduling_minimalDelayOfNestedTimersInBrowser" onclick="minimalDelayOfNestedTimersInBrowser()"/></td>
+<td></td>
+</tr>
+
+<tr>
+<td><input type="button" value="032-Decorators_forwarding_call_apply_transparentCaching" onclick="transparentCaching()"/></td>
+<td><input type="button" value="032-Decorators_forwarding_call_apply_functionCall" onclick="usingFuncCall_for_the_context()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="032-Decorators_forwarding_call_apply_multiArgumentWithFuncApply" onclick="multiArgumentWithFuncApply()"/></td>
+<td></td>
+</tr>
+
+<tr>
+<td><input type="button" value="033-Function_binding_losing_this" onclick="losing_this()"/></td>
+<td></td>
+</tr>
+
+<tr>
+<td><input type="button" value="034-Currying-and-partials_bindWithArguments" onclick="bindWithArguments()"/></td>
+<td><input type="button" value="034-Currying-and-partials_PartialWithoutContext" onclick="goingPartialWithoutContext()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="034-Currying-and-partials_currying" onclick="currying()"/></td>
+<td><input type="button" value="035-Arrow_functions_revisited" onclick="arrowFunctionsRevisited()"/></td>
 </tr>
 
 </table>
