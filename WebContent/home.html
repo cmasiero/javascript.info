@@ -34,6 +34,10 @@
 <script type="text/javascript" src="036-Property-flags-descriptors.js"></script>
 <script type="text/javascript" src="037-Property-getters-and-setters.js"></script>
 <script type="text/javascript" src="038-Prototypal-inheritance.js"></script>
+<script type="text/javascript" src="039-Fprototype.js"></script>
+<script type="text/javascript" src="040-Native-prototypes.js"></script>
+<script type="text/javascript" src="041-Methods-for-prototypes.js"></script>
+<script type="text/javascript" src="042-ClassPatterns.js"></script>
 
 <title>javascript-info</title>
 </head>
@@ -45,9 +49,6 @@
 <tr>
 <td style="width: 100px;"><input type="button" value="001-code-structure" onclick="code_structure();"/></td>
 <td style="width: 100px;"><input type="button" value="002-data-types" onclick="data_types();"/></td>
-</tr>
-
-<tr>
 <td><input type="button" value="003-operators" onclick="operators();"/></td>
 <td><input type="button" value="004-functions" onclick="function004();"/></td>
 </tr>
@@ -55,9 +56,6 @@
 <tr>
 <td><input type="button" value="005-function-expressions-and-arrows" onclick="function_expressions_and_arrows();"/></td>
 <td><input type="button" value="007-objects" onclick="objects();"/></td>
-</tr>
-
-<tr>
 <td><input type="button" value="007-objects-cloning-and-merging" onclick="objectsCloningMerging();"/></td>
 <td><input type="button" value="009-symbol-type" onclick="symbol_type();"/></td>
 </tr>
@@ -65,9 +63,6 @@
 <tr>
 <td><input type="button" value="010-object-methods-this" onclick="object_methods_this();"/></td>
 <td><input type="button" value="010-object-methods-this2" onclick="object_methods_this2();"/></td>
-</tr>
-
-<tr>
 <td><input type="button" value="011-object-to-primitive-conversion" onclick="object_to_primitive_conversion();"/></td>
 <td><input type="button" value="012-constructor_operator_new" onclick="constructor_operator_new();"/></td>
 </tr>
@@ -75,9 +70,6 @@
 <tr>
 <td><input type="button" value="017-array-methods" onclick="array_methods();"/></td>
 <td><input type="button" value="018-iterables" onclick="iterables();"/></td>
-</tr>
-
-<tr>
 <td><input type="button" value="019-map-set-weakMap-weakSet" onclick="map_set_weakMap_weakSet();"/></td>
 <td><input type="button" value="020-Object_keys_values_entries" onclick="object_keys_values_entries();"/></td>
 </tr>
@@ -151,20 +143,14 @@
 
 <table border="1">
 <tr>
-<td colspan="2">Objects, classes, inheritance</td>
+<td colspan="6">Objects, classes, inheritance</td>
 </tr>
 
 <tr>
 <td><input type="button" value="036-Property-flags" onclick="propertyFlags()"/></td>
 <td><input type="button" value="036-PropertyFlagsReadOnly" onclick="propertyFlagsReadOnly()"/></td>
-</tr>
-
-<tr>
 <td><input type="button" value="036-PropertyFlagsNonEnumerable" onclick="propertyFlagsNonEnumerable()"/></td>
 <td><input type="button" value="036-PropertyFlagsNonConfigurable" onclick="propertyFlagsNonConfigurable()"/></td>
-</tr>
-
-<tr>
 <td><input type="button" value="036-PropertyFlags-DefineProperties" onclick="objectDefineProperties()"/></td>
 <td><input type="button" value="036-PropertyFlags-GetOwnPropertyDescriptors" onclick="objectGetOwnPropertyDescriptors()"/></td>
 </tr>
@@ -172,21 +158,33 @@
 <tr>
 <td><input type="button" value="037-Property-getters-and-setters" onclick="gettersAndSetters()"/></td>
 <td><input type="button" value="037-Property-get-set-accessorDescriptors" onclick="accessorDescriptors()"/></td>
-</tr>
-
-<tr>
 <td><input type="button" value="037-Property-smarterGettersSetters" onclick="smarterGettersSetters()"/></td>
 <td><input type="button" value="037-Property-usingForCompatibility()" onclick="usingForCompatibility()"/></td>
 </tr>
 
 <tr>
 <td><input type="button" value="038-Prototypal-inheritance_prototype" onclick="prototype()"/></td>
+<td><input type="button" value="038-Prototypal-readWriteRule" onclick="readWriteRules()"/></td>
+<td><input type="button" value="038-Prototypal-theValueOfThis" onclick="theValueOfThis()"/></td>
 <td><input type="button" value="b" onclick=""/></td>
 </tr>
 
 <tr>
-<td><input type="button" value="a" onclick=""/></td>
-<td><input type="button" value="b" onclick=""/></td>
+<td><input type="button" value="039-Fprototype_thePrototypeProperty" onclick="thePrototypeProperty()"/></td>
+<td><input type="button" value="039-Fprototype_defaultFPrototypeConstructorProperty" onclick="defaultFPrototypeConstructorProperty()"/></td>
+<td><input type="button" value="039-Fprototype_notEnsureTheRightConstructorValue" onclick="notEnsureTheRightConstructorValue()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="040-Native-prototypes" onclick="objectPrototype()"/></td>
+<td><input type="button" value="040-OtherBuiltInPrototypes" onclick="otherBuiltInPrototypes()"/></td>
+<td><input type="button" value="040-ChangingNativePrototypes" onclick="objectPrototype()"/></td>
+<td><input type="button" value="040-borrowingFromPrototypes" onclick="borrowingFromPrototypes()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="041-Methods-for-prototypes.js" onclick="methodsForPrototypes()"/></td>
+<td><input type="button" value="042-ClassPatterns.js" onclick="functionalClassPattern()"/></td>
 </tr>
 
 </table>
