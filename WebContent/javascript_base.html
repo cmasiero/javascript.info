@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type="text/javascript" src="base/001-code-structure.js"></script>
+<script type="text/javascript" src="base/002-data-types.js"></script>
+<script type="text/javascript" src="base/003-operators.js"></script>
+<script type="text/javascript" src="base/004-functions.js"></script>
+<script type="text/javascript" src="base/005-function-expressions-and-arrows.js"></script>
+<script type="text/javascript" src="base/007-objects.js"></script>
+<script type="text/javascript" src="base/007-objects-cloning-and-merging.js"></script>
+<script type="text/javascript" src="base/lodash.js"></script>
+<script type="text/javascript" src="base/009-symbol-type.js"></script>
+<script type="text/javascript" src="base/010-object-methods-this.js"></script>
+<script type="text/javascript" src="base/011-object-to-primitive-conversion.js"></script>
+<script type="text/javascript" src="base/012-constructor-operator-new.js"></script>
+<script type="text/javascript" src="base/017-array-methods.js"></script>
+<script type="text/javascript" src="base/018-iterables.js"></script>
+<script type="text/javascript" src="base/019-map-set-weakMap-weakSet.js"></script>
+<script type="text/javascript" src="base/020-Object_keys_values_entries.js"></script>
+<script type="text/javascript" src="base/021-Destructuring_assignment.js"></script>
+<script type="text/javascript" src="base/022-date_and_time.js"></script>
+<script type="text/javascript" src="base/023_JSON_methods.js"></script>
+<script type="text/javascript" src="base/025_Rest_parameters_and_spread_operator.js"></script>
+<script type="text/javascript" src="base/026_Closure.js"></script>
+<script type="text/javascript" src="base/027-the-old-var.js"></script>
+<script type="text/javascript" src="base/029-Function-object-NFE.js"></script>
+<script type="text/javascript" src="base/030-The_new_Function_syntax.js"></script>
+<script type="text/javascript" src="base/031-Scheduling_setTimeout_setInterval.js"></script>
+<script type="text/javascript" src="base/032-Decorators_forwarding_call_apply.js"></script>
+<script type="text/javascript" src="base/033-Function_binding.js"></script>
+<script type="text/javascript" src="base/034-Currying-and-partials.js"></script>
+<script type="text/javascript" src="base/035-Arrow_functions_revisited.js"></script>
+<script type="text/javascript" src="base/036-Property-flags-descriptors.js"></script>
+<script type="text/javascript" src="base/037-Property-getters-and-setters.js"></script>
+<script type="text/javascript" src="base/038-Prototypal-inheritance.js"></script>
+<script type="text/javascript" src="base/039-Fprototype.js"></script>
+<script type="text/javascript" src="base/040-Native-prototypes.js"></script>
+<script type="text/javascript" src="base/041-Methods-for-prototypes.js"></script>
+<script type="text/javascript" src="base/042-ClassPatterns.js"></script>
+<script type="text/javascript" src="base/043-Classes.js"></script>
+<script type="text/javascript" src="base/044-classInheritanceSuper.js"></script>
+<script type="text/javascript" src="base/045-ClassCheckingInstanceof.js"></script>
+<script type="text/javascript" src="base/046-Mixins.js"></script>
+
+<title>javascript-base</title>
+</head>
+<body>
+
+<table border="1" style="float: left;">
+<!-- <h3>From site https://javascript.info/</h3> -->
+<tr><td colspan="2">From site https://javascript.info/</td></tr>
+<tr>
+<td style="width: 100px;"><input type="button" value="001-code-structure" onclick="code_structure();"/></td>
+<td style="width: 100px;"><input type="button" value="002-data-types" onclick="data_types();"/></td>
+<td><input type="button" value="003-operators" onclick="operators();"/></td>
+<td><input type="button" value="004-functions" onclick="function004();"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="005-function-expressions-and-arrows" onclick="function_expressions_and_arrows();"/></td>
+<td><input type="button" value="007-objects" onclick="objects();"/></td>
+<td><input type="button" value="007-objects-cloning-and-merging" onclick="objectsCloningMerging();"/></td>
+<td><input type="button" value="009-symbol-type" onclick="symbol_type();"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="010-object-methods-this" onclick="object_methods_this();"/></td>
+<td><input type="button" value="010-object-methods-this2" onclick="object_methods_this2();"/></td>
+<td><input type="button" value="011-object-to-primitive-conversion" onclick="object_to_primitive_conversion();"/></td>
+<td><input type="button" value="012-constructor_operator_new" onclick="constructor_operator_new();"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="017-array-methods" onclick="array_methods();"/></td>
+<td><input type="button" value="018-iterables" onclick="iterables();"/></td>
+<td><input type="button" value="019-map-set-weakMap-weakSet" onclick="map_set_weakMap_weakSet();"/></td>
+<td><input type="button" value="020-Object_keys_values_entries" onclick="object_keys_values_entries();"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="022-date_and_time" onclick="date_and_time()"/></td>
+<td><input type="button" value="023_JSON_methods" onclick="json_methods()"/></td>
+</tr>
+</table>
+
+
+<table border="1" style="display: inline-block;">
+<tr><td colspan="2">Advanced working with functions</td></tr>
+<!-- <h3>Advanced working with functions</h3> -->
+<tr>
+<td><input type="button" value="025_Rest_parameters_and_spread_operator" onclick="rest_parameters_spread_operator()"/></td>
+<td><input type="button" value="026_Closure" onclick="closure()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="027-the-old-var" onclick="theOldVar()"/></td>
+<td><input type="button" value="029-Function-object-NFE" onclick="functionObjectNFE()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="030-The_new_Function_syntax" onclick="theNewFunctionSyntax()"/></td>
+<td></td>
+</tr>
+
+<tr>
+<td><input type="button" value="031-Scheduling_setTimeout_setInterval" onclick="schedulingSetTimeoutSetInterval()"/></td>
+<td><input type="button" value="031-Scheduling_recursive_setTimeout" onclick="schedulingRecursiveSetTimeout()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="031-Scheduling_setTimeout0" onclick="schedulingSetTimeout0()"/></td>
+<td><input type="button" value="031-Scheduling_splitting_CPU_hungry_tasks" onclick="schedulingSplittingCPUHungryTasks()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="031-Scheduling_minimalDelayOfNestedTimersInBrowser" onclick="minimalDelayOfNestedTimersInBrowser()"/></td>
+<td></td>
+</tr>
+
+<tr>
+<td><input type="button" value="032-Decorators_forwarding_call_apply_transparentCaching" onclick="transparentCaching()"/></td>
+<td><input type="button" value="032-Decorators_forwarding_call_apply_functionCall" onclick="usingFuncCall_for_the_context()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="032-Decorators_forwarding_call_apply_multiArgumentWithFuncApply" onclick="multiArgumentWithFuncApply()"/></td>
+<td></td>
+</tr>
+
+<tr>
+<td><input type="button" value="033-Function_binding_losing_this" onclick="losing_this()"/></td>
+<td></td>
+</tr>
+
+<tr>
+<td><input type="button" value="034-Currying-and-partials_bindWithArguments" onclick="bindWithArguments()"/></td>
+<td><input type="button" value="034-Currying-and-partials_PartialWithoutContext" onclick="goingPartialWithoutContext()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="034-Currying-and-partials_currying" onclick="currying()"/></td>
+<td><input type="button" value="035-Arrow_functions_revisited" onclick="arrowFunctionsRevisited()"/></td>
+</tr>
+
+</table>
+
+<table border="1">
+<tr>
+<td colspan="6">Objects, classes, inheritance</td>
+</tr>
+
+<tr>
+<td><input type="button" value="036-Property-flags" onclick="propertyFlags()"/></td>
+<td><input type="button" value="036-PropertyFlagsReadOnly" onclick="propertyFlagsReadOnly()"/></td>
+<td><input type="button" value="036-PropertyFlagsNonEnumerable" onclick="propertyFlagsNonEnumerable()"/></td>
+<td><input type="button" value="036-PropertyFlagsNonConfigurable" onclick="propertyFlagsNonConfigurable()"/></td>
+<td><input type="button" value="036-PropertyFlags-DefineProperties" onclick="objectDefineProperties()"/></td>
+<td><input type="button" value="036-PropertyFlags-GetOwnPropertyDescriptors" onclick="objectGetOwnPropertyDescriptors()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="037-Property-getters-and-setters" onclick="gettersAndSetters()"/></td>
+<td><input type="button" value="037-Property-get-set-accessorDescriptors" onclick="accessorDescriptors()"/></td>
+<td><input type="button" value="037-Property-smarterGettersSetters" onclick="smarterGettersSetters()"/></td>
+<td><input type="button" value="037-Property-usingForCompatibility()" onclick="usingForCompatibility()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="038-Prototypal-inheritance_prototype" onclick="prototype()"/></td>
+<td><input type="button" value="038-Prototypal-readWriteRule" onclick="readWriteRules()"/></td>
+<td><input type="button" value="038-Prototypal-theValueOfThis" onclick="theValueOfThis()"/></td>
+<td><input type="button" value="b" onclick=""/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="039-Fprototype_thePrototypeProperty" onclick="thePrototypeProperty()"/></td>
+<td><input type="button" value="039-Fprototype_defaultFPrototypeConstructorProperty" onclick="defaultFPrototypeConstructorProperty()"/></td>
+<td><input type="button" value="039-Fprototype_notEnsureTheRightConstructorValue" onclick="notEnsureTheRightConstructorValue()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="040-Native-prototypes" onclick="objectPrototype()"/></td>
+<td><input type="button" value="040-OtherBuiltInPrototypes" onclick="otherBuiltInPrototypes()"/></td>
+<td><input type="button" value="040-ChangingNativePrototypes" onclick="objectPrototype()"/></td>
+<td><input type="button" value="040-borrowingFromPrototypes" onclick="borrowingFromPrototypes()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="041-Methods-for-prototypes" onclick="methodsForPrototypes()"/></td>
+<td><input type="button" value="042-ClassPatterns_functional" onclick="functionalClassPattern()"/></td>
+<td><input type="button" value="042-ClassPatterns_factory" onclick="factoryClassPattern()"/></td>
+<td><input type="button" value="042-ClassPatterns_prototypeBasedClasses" onclick="prototypeBasedClasses()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="043-Classes_ClassSyntax" onclick="theClassSyntax()"/></td>
+<td><input type="button" value="043-Classes_ClassExpression" onclick="classExpression()"/></td>
+<td><input type="button" value="043-Classes_StaticMethods" onclick="staticMethods()"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="044-classInheritanceSuper" onclick="classInheritanceSuper()"/></td>
+<td><input type="button" value="045-ClassCheckingInstanceof" onclick="classCheckingInstanceof()"/></td>
+<td><input type="button" value="046-Mixing" onclick="mixins()"/></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>
